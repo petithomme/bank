@@ -1,0 +1,24 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+mat-toolbar {
+  min-height: 75px;
+  max-height: 75px;
+}
+
+#addTodo {
+  cursor: pointer;
+}
+
+.example-form {
+  min-height: 2px;
+  max-height: 2px;
+  min-width: 200px;
+  max-width: 200px;
+  margin-top: -67px;
+}

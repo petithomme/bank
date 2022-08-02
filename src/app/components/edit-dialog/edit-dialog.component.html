@@ -1,0 +1,24 @@
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>What's your name?</mat-label>
+    <input matInput [(ngModel)]="this.accountHolder">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>What's your IBAN?</mat-label>
+    <input matInput [(ngModel)]="this.iban">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Which date for your transfer?</mat-label>
+    <input matInput [(ngModel)]="this.date">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Do you want to add a note?</mat-label>
+    <input matInput [(ngModel)]="this.note">
+  </mat-form-field>
+</div>
