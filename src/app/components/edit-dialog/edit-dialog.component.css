@@ -1,0 +1,15 @@
+.dialogButtons {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+
+.error {
+  color: red;
+  margin-top: -5px;
+}
+
+#matPicker {
+  margin-left: -35px;
+}

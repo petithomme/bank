@@ -1,1 +1,12 @@
-<p>transfers works!</p>
+<div class="elementTitle" id="container">
+<div class="elementTitle">Account name</div>
+<div class="elementTitle">Date</div>
+<div class="elementTitle">Amount</div>
+<div class="elementTitle">IBAN</div>
+<div class="elementTitle">Note</div>
+</div>
+<div *ngFor="let transfer of (this.transfers$ | async)">
+  <app-transfer [transfer]="transfer"> </app-transfer>
+</div>
+
+

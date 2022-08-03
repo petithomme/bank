@@ -1,8 +1,8 @@
 export interface TransferModel {
   accountHolder: string;
   iban: string;
-  amount: number;
-  date: Date;
+  amount: string;
+  date: string;
   note: string;
   id: string;
 }

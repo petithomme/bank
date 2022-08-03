@@ -1,0 +1,26 @@
+#container {
+  display: flex;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.elementTitle {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+mat-table {
+  background-color: white;
+}
+
+mat-table th {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mat-column-name, .mat-column-date, .mat-column-amount, .mat-column-iban, .mat-column-note {
+  padding-left: 16px;
+  font-size: 14px;
+  width: 200px;
+  color: brown;
+}

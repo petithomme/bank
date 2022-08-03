@@ -4,21 +4,36 @@
     <input matInput [(ngModel)]="this.accountHolder">
   </mat-form-field>
 </div>
+<div class="error" *ngIf="this.accountError">Account can't be empty</div>
+<div>
+  <mat-form-field appearance="fill">
+    <mat-label>Which amount to transfer?</mat-label>
+    <input  required matInput [(ngModel)]="this.amount">
+  </mat-form-field>
+</div>
+<div class="error" *ngIf="this.amountError">Amount is wrong, min 50€, max 20000€</div>
 <div>
   <mat-form-field appearance="fill">
     <mat-label>What's your IBAN?</mat-label>
-    <input matInput [(ngModel)]="this.iban">
+    <input required matInput [(ngModel)]="this.iban">
   </mat-form-field>
 </div>
+<div class="error" *ngIf="this.ibanError">Your IBAN is wrong</div>
 <div>
   <mat-form-field appearance="fill">
-    <mat-label>Which date for your transfer?</mat-label>
-    <input matInput [(ngModel)]="this.date">
+    <mat-label>Which date ?</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="this.date">
+    <mat-datepicker-toggle id="matPicker" matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 </div>
+<div class="error" *ngIf="this.dateError">Error with the date of transfer</div>
 <div>
   <mat-form-field appearance="fill">
-    <mat-label>Do you want to add a note?</mat-label>
-    <input matInput [(ngModel)]="this.note">
+    <mat-label>Add a note</mat-label>
+    <input required matInput [(ngModel)]="this.note">
   </mat-form-field>
 </div>
+<div class="error" *ngIf="this.noteError">Note can't be empty</div>
+<button class="dialogButtons" (click)="this.validate()">VALIDATE</button>
+<button class="dialogButtons" (click)="this.cancel()">CANCEL</button>

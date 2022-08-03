@@ -1,8 +1,10 @@
 <mat-toolbar color="primary">
-  <span>All transfer</span>
+  <span>All transfers</span>
   <span class="example-spacer"></span>
   <mat-form-field class="example-form">
-    <input matInput placeholder="Your new todo" appearance="none" [(ngModel)]="this.newTransfer" (keyup.enter)="this.addTransfer()">
+    <input matInput placeholder="Filter : " appearance="none" [(ngModel)]="this.filterValue">
   </mat-form-field>
-  <mat-icon id="addTodo" (click)="this.addTransfer()">note_add</mat-icon>
+  <span id="addTransfer" (click)="this.addTransfer()" > Add transfer:
+     <mat-icon>note_add</mat-icon>
+  </span>
 </mat-toolbar>

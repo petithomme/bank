@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { AddTransfer } from '../../actions/transfers/transfers.actions';
+import { TransferService } from '../../services/transfer.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -8,14 +7,13 @@ import { AddTransfer } from '../../actions/transfers/transfers.actions';
   styleUrls: ['./top-bar.component.css'],
 })
 export class TopBarComponent implements OnInit {
-  public newTransfer: string = '';
+  public filterValue: string = '';
 
-  constructor(private store: Store) {}
+  constructor(private transferService: TransferService) {}
 
   ngOnInit(): void {}
 
   addTransfer(): void {
-    // this.store.dispatch(AddTransfer({ }));
-    // this.newTransfer = '';
+    this.transferService.createTransfer();
   }
 }

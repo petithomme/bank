@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TransferModel } from '../../models/transfer.model';
+import { TransferService } from '../../services/transfer.service';
 
 @Component({
   selector: 'app-transfer',
@@ -16,7 +17,18 @@ export class TransferComponent implements OnInit {
     note: '',
     id: '',
   };
-  constructor() {}
+  constructor(private transferService: TransferService) {}
 
   ngOnInit(): void {}
+
+  delete(): void {
+    let valid = confirm('Press a button!');
+    if (valid) {
+      this.transferService.deleteTransfer(this.transfer.id);
+    }
+  }
+
+  edit(): void {
+    this.transferService.editTransfer(this.transfer);
+  }
 }

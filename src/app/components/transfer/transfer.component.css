@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+}
+
+.element {
+  min-width: 200px;
+  max-width: 200px;
+  overflow: hidden;
+}
+.deleteButton, .editButton{
+  margin-left: 15px;
+}

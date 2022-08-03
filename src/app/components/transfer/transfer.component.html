@@ -1,1 +1,10 @@
-<p>transfer works!</p>
+<div class="container">
+  <div class="element"> {{ this.transfer.accountHolder }}</div>
+  <div class="element"> {{ this.transfer.date | date }}</div>
+  <div class="element"> {{ this.transfer.amount }}</div>
+  <div class="element"> {{ this.transfer.iban }}</div>
+  <div class="element"> {{ this.transfer.note }}</div>
+  <mat-icon (click)="this.delete()" class="deleteButton">delete</mat-icon>
+  <mat-icon (click)="this.edit()" class="editButton">edit</mat-icon>
+<div>
+
